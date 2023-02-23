@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    width: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 180px;
+}
+body{
+    width: 100%;
+    background-color: rgb(70, 66, 66);
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: rgb(70, 66, 66);
+    width: 100%;
+    height: 180px;
+    border-bottom: 2px solid orangered;
+    position: sticky;
+    top: 0;
+}
+
+.cont-header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.yo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.yo img{
+    width: 200px;
+    height: 180px;
+}
+.yo h2{
+    margin: 0;
+    color: whitesmoke;
+    font-size: 3em;
+    text-shadow: 5px 5px 5px black;
+}
+.cont-nav{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    width: 100%;
+}
+.lista{
+    width: 100%;
+    height: 180px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+}
+.lista li{
+    margin-bottom: 5px;
+
+}
+.lista a{
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: x-large; 
+  text-shadow: 5px 5px 5px black;
+}
+.cont-nav i{
+    font-size: 40px;
+    color: whitesmoke;
+    cursor: pointer;
+    display: none;
+}
+#toggle-menu {
+    display: none;
+}
+@media (max-width: 990px) {
+    .header{
+        padding: opx 50px 0px 10px;
+    }
+    .cont-nav i{
+        display: flex;
+    }
+    .lista{
+        position: absolute;
+        background-color:  rgb(70, 66, 66);
+        flex-direction: column;
+        top: 100px;
+        align-items: center;
+        right: 0;
+        width: 30%;
+        height: calc(100vh - 180px);
+        z-index: 999;
+        display: none;
+    }
+
+#toggle-menu:checked + .lista {
+    display: flex;
+    }
+.cont-nav label{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+}
+}
+
+.titulo{
+    display: flex;
+    color: gold;
+    font-size: 3.5em;
+    justify-content: center;
+    text-shadow: 5px 5px 5px black;
+    
+}
+.titulo:hover{
+    color: orangered;
+    text-shadow: -8px 8px 8px black;
+}
+
+.sec-info{
+    background-image:url(./img/fondo\ \(1\).jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    border-bottom: 2px solid orangered;
+}
+
+.sobre-mi{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    border-bottom: 2px solid orangered;
+}
+.sobre-mi h2{
+    color: gold;
+    font-size: 2.3em;
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  
+}
+.sobre-mi p{
+    display: flex;
+    color: whitesmoke;
+    text-align: justify;
+    width: 80%;
+    font-size: 22px;
+    margin: 10px ;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px 5px black;
+}
+.section-habilidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.sec-habilidades h2{
+    color: gold;
+    font-size: 2.3em;
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.cards-contenedor{
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.cards{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    box-shadow: 5px 5px 5px 5px black;
+    border-radius: 5%;
+}
+.cards:hover{
+    box-shadow: -5px 5px 5px 5PX black;
+}
+.card-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card-img img{
+    width: 100px;
+}
+.card-contenido{
+    display: flex;
+    justify-content: center;
+}
+.card-contenido h3{
+    color: gold;
+    font-size: 1.8em;
+    text-shadow: 5px 5px 5px black; 
+    margin: 5px;  
+}
+@media (max-width: 990px) {
+    .card-contenido h3{
+        font-size: 1em;
+    }
+}
+.card-contenido h3:hover{
+    color: orangered;
+    text-shadow: -5px 5px 5px black;
+}
+.contenedor-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: orangered solid 2px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: orangered solid 10px;
+}
+.footer-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 0px;
+}
+@media (max-width: 990px) {
+    .contenedor-footer{
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+    }
+    
+}
+.footer-info h2{
+    color: gold;
+    font-size: 2.3em;
+    margin-left: 100px;
+    text-shadow: 5px 5px 5px black;
+    margin-bottom: 20px;
+}
+.logo-footer{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-bottom: 5px;
+}
+.logo-footer h3{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    color: black;
+    align-items: center;
+    margin-left: 10px;
+}
+.footer-contacto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.footer-contacto h2 {
+    color: gold;
+    font-size: 2.3em;
+    text-shadow: 5px 5px 5px black;
+    margin-bottom: 20px;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 100px;
+}
+.cont-titulo {
+    margin-top: 25px;
+}
+.formulario input {
+    width: 35em;
+    height: 2.3em;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    box-shadow: 5px 5px 5px black;
+}
+.formulario textarea  {
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    margin-bottom: 10px;
+}
+.enviar button {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(70, 66, 66);
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+    font-size: 2em;
+    color: gold;
+    text-shadow: 5px 5px 5px black;
+}
+.enviar button:hover{
+    color: orangered;
+    text-shadow: -5px 5px 5px black;
+    box-shadow: -5px 5px 5px black;
+}
